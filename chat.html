@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PG Complaint Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏠 PG Complaint Management</h1>
+        <p>Report and track your complaints easily</p>
+    </header>
+
+
+    <main>
+
+        <!-- Complaint Form -->
+
+        <section class="form-section">
+
+            <h2>Submit a Complaint</h2>
+
+            <form id="complaintForm">
+
+                <div class="form-group">
+
+                    <label>Resident Name</label>
+
+                    <input
+                        type="text"
+                        id="residentName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Room / Flat Number</label>
+
+                    <input
+                        type="text"
+                        id="roomNumber"
+                        placeholder="Example: 101"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Contact Number</label>
+
+                    <input
+                        type="tel"
+                        id="contact"
+                        placeholder="10 digit mobile number"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Complaint Category</label>
+
+                    <select id="category" required>
+
+                        <option value="">Select Category</option>
+
+                        <option value="Electricity">
+                            Electricity
+                        </option>
+
+                        <option value="Water">
+                            Water
+                        </option>
+
+                        <option value="Internet">
+                            Internet
+                        </option>
+
+                        <option value="Plumbing">
+                            Plumbing
+                        </option>
+
+                        <option value="Housekeeping">
+                            Housekeeping
+                        </option>
+
+                        <option value="Maintenance">
+                            Maintenance
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Priority</label>
+
+                    <select id="priority" required>
+
+                        <option value="">Select Priority</option>
+
+                        <option value="Low">Low</option>
+
+                        <option value="Medium">Medium</option>
+
+                        <option value="High">High</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Description</label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Describe your problem"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Submit Complaint
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        
+
+        <section class="list-section">
+
+            <div class="list-header">
+
+                <h2>Complaint List</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search complaints..."
+                >
+
+            </div>
+
+
+            <div id="complaintList"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+</body>
+
+</html>
